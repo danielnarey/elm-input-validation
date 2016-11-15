@@ -2,14 +2,12 @@ import InputValidation as Validate exposing (TypedInput(..))
 import Html exposing (Html)
 import Html.Attributes as Attr
 import Html.Events as Events
-import Html.App as App
 import Json.Decode as Json
 import List
-import String
 
 
 main =
-  App.beginnerProgram
+  Html.beginnerProgram
     { model = userInput
     , view = view
     , update = update
@@ -173,7 +171,7 @@ inputField : (TypedInput a -> CapturedValue a) -> (Json.Value -> TypedInput a) -
 inputField captureKey inputKey =
   []
     |> Html.input
-      [ Attr.type' "text"
+      [ Attr.type_ "text"
       , inputKey
         |> Validate.captureOnInput captureKey
       ]

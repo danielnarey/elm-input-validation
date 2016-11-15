@@ -24,12 +24,10 @@ expected, an error results.
 
 -}
 
-import Toolkit.Operators exposing (..)
-import Toolkit.Helpers exposing (thenTry)
 import Json.Decode as Json exposing (Decoder)
 import Html exposing (Attribute)
 import Html.Events as Events
-import String
+import Result
 
 
 -- VALUE REPRESENTATION
@@ -98,7 +96,7 @@ readIntInput typedInput =
     IntInput jsonValue ->
       jsonValue
         |> Json.decodeValue Json.string
-        |> thenTry String.toInt
+        |> Result.andThen String.toInt
 
     _ ->
       Err "Expecting `IntInput`"
@@ -115,7 +113,7 @@ readFloatInput typedInput =
     FloatInput jsonValue ->
       jsonValue
         |> Json.decodeValue Json.string
-        |> thenTry String.toFloat
+        |> Result.andThen String.toFloat
 
     _ ->
       Err "Expecting `FloatInput`"
@@ -132,7 +130,7 @@ readBoolInput typedInput =
     BoolInput expression jsonValue ->
       jsonValue
         |> Json.decodeValue Json.string
-        !|> expression
+        |> Result.map expression
 
 
     _ ->
