@@ -10,7 +10,6 @@ expected, an error results.
 __Dependencies:__
 - [elm-lang/core/5.0.0](http://package.elm-lang.org/packages/elm-lang/core/5.0.0)
 - [elm-lang/html/2.0.0](http://package.elm-lang.org/packages/elm-lang/html/2.0.0)
-- [danielnarey/elm-toolkit/3.0.0](http://package.elm-lang.org/packages/danielnarey/elm-toolkit/3.0.0)
 
 __Extensions:__
 - [danielnarey/elm-form-capture](http://package.elm-lang.org/packages/danielnarey/elm-form-capture/latest)
