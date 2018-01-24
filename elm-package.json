@@ -1,6 +1,6 @@
 {
-    "version": "1.0.2",
-    "summary": "Type-validation for user input from text, numeric, and custom fields",
+    "version": "1.0.3",
+    "summary": "Deprecated in favor of danielnarey/elm-modular-ui",
     "repository": "https://github.com/danielnarey/elm-input-validation.git",
     "license": "BSD2",
     "source-directories": [

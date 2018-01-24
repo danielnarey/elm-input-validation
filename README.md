@@ -1,15 +1,10 @@
-## Type-validation for user input from text, numeric, and custom fields
+# Deprecated
 
-This library provides a consistent way of handling type-validation for user
-input. The type of input expected is specified when constructing an input
-element in the Elm program's view, and the corresponding reader function is
-called when program updates in response to input. If the input does not match
-the expected type, or the reader function called does not correspond to the type
-expected, an error results.
-
-__Dependencies:__
-- [elm-lang/core/5.0.0](http://package.elm-lang.org/packages/elm-lang/core/5.0.0)
-- [elm-lang/html/2.0.0](http://package.elm-lang.org/packages/elm-lang/html/2.0.0)
-
-__Extensions:__
-- [danielnarey/elm-form-capture](http://package.elm-lang.org/packages/danielnarey/elm-form-capture/latest)
+I created this package as an experiment to try to come up with a consistent
+way of handling errors when converting text input to an Int, Float, Bool, or
+custom type. The approach here turned out to be too cumbersome to apply in
+practice. I came up with a better solution for my
+[Modular UI](http://package.elm-lang.org/packages/danielnarey/elm-modular-ui/latest)
+package, which was to incorporate error handling into
+[constructor functions](http://package.elm-lang.org/packages/danielnarey/elm-modular-ui/1.0.1/Ui-Input#input-fields-with-built-in-encoding-decoding)
+for input elements that capture numeric and custom values.
